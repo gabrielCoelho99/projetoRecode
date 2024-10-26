@@ -1,0 +1,245 @@
+:root {
+    --primary: #1a73e8;
+    --secondary: #34a853;
+    --warning: #fbbc05;
+    --danger: #ea4335;
+    --light: #f8f9fa;
+    --dark: #202124;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--dark);
+    position: relative;
+    
+  }
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(10px); /* Aplica o desfoque */
+    z-index: -1; /* Coloca a imagem desfocada atrás do conteúdo */
+  }
+
+        /* Header */
+        header {
+            /* background: var(--primary); */
+            color: var(--dark);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #20212415;
+            padding: 1rem;
+            /* border: solid rgba(255, 0, 0, 0.13); */
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--light);
+            color: var(--dark);
+            /* border: solid rgba(255, 0, 0, 0.301) 1px; */
+        }
+
+        /* Main content */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-right: 10px;
+        }
+
+/* Alert Banner */
+.alert-banner {
+    background: var(--warning);
+    color: var(--dark);
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+.alert-system {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.alert-card {
+    border-left: 4px solid;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.alert-critical {
+    border-left-color: #ff4444;
+    background-color: #ffebee;
+}
+
+.alert-warning {
+    border-left-color: #ffbb33;
+    background-color: #fff8e1;
+}
+
+.alert-info {
+    border-left-color: #33b5e5;
+    background-color: #e3f2fd;
+}
+
+.alert-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.alert-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.alert-timestamp {
+    color: #666;
+    font-size: 0.9em;
+    margin-left: auto;
+}
+
+.alert-content {
+    margin-left: 34px;
+}
+
+.alert-regions {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.region-tag {
+    display: inline-block;
+    padding: 4px 8px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 4px;
+    margin: 2px;
+    font-size: 0.9em;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.068);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: var(--dark);
+}
+
+/* Map Section */
+.map-container {
+    background: #f0f0f044;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.map-container h2 {
+    color: var(--light);
+}
+
+#apiMap{
+    background: #ddd; 
+    height: 400px; 
+    border-radius: 8px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+
+
+
+/* Estilos do Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(30, 30, 63, 0.8);
+    position: relative;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+  }
+  
+  .social-links {
+    margin-top: 10px;
+  }
+  
+  .social-links a {
+    color: #00bcd4;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    /* color: #0097a7; Cor de hover */
+    color: white;
+  }
+  
+  .social-links img {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+  }

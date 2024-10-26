@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alerta RS - Portal de Prevenção e Resposta a Enchentes</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/ajuda.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Alerta RS</h1>
+      <p>Sistema Integrado de Prevenção e Resposta a Enchentes</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Alertas</a></li>
+        <li><a href="mapa.html">Mapa</a></li>
+        <li><a href="prevencao.html">Prevenção</a></li>
+        <li><a href="ajuda.html">Dicas de Segurança</a></li>
+        <li><a href="voluntario.html">Seja Voluntário</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+        <h1>Defenda-se contra Enchentes</h1>
+        <p>Preparação para enchentes em comunidades sustentáveis</p>
+
+        <div class="section">
+          <h2 class="section-title">Dicas de Prevenção</h2>
+          <div class="cards-grid">
+            <div class="card">
+              <h3>Monitoramento do Tempo e Alerta:</h3>
+              <p>
+                Acompanhe a previsão do tempo e configure alertas automáticos
+                para enchentes
+              </p>
+            </div>
+            <div class="card">
+              <h3>Preparação do Imóvel:</h3>
+              <p>
+                Utilize sacos de areia, eleve móveis e mantenha ralos e drenos
+                desobstruídos.
+              </p>
+            </div>
+            <div class="card">
+                <h3>Kit de Emergência:</h3>
+                <p>Inclua itens essenciais como água, alimentos, primeiros socorros, documentos e lanternas.</p>
+                <button onclick="openModal()">Lista de auxílio</button>
+              </div>
+
+              <!-- Código do Modal -->
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                        <h3>Checklist de Kit de Emergência</h3>
+                        <ul>
+                            <li>Água potável - 2 litros por pessoa para 3 dias</li>
+                            <li>Alimentos não perecíveis - estoque para 3 dias</li>
+                            <li>Kit de primeiros socorros</li>
+                            <li>Documentos importantes em uma bolsa impermeável</li>
+                            <li>Lanternas e baterias extras</li>
+                            <!-- Adicione outros itens necessários -->
+                        </ul>
+                        </div>
+                    </div>
+            <div class="card">
+              <h3>Plano Familiar de Emergência:</h3>
+              <p>
+                Defina um ponto de encontro e conheça as rotas de evacuação.
+              </p>
+            </div>
+
+            <div class="card">
+                <h3>Avisos e Alertas:</h3>
+                <p>
+                    Confira as notícias atualizadas da Defesa Civil do Rio Grande Do Sul em tempo real.
+                </p>
+                <button>
+                    <a class="linkAjuda" href="https://defesacivil.rs.gov.br/avisos-e-alertas" target="_blank">Consulte aqui 🤓</a>
+                </button>
+              </div>
+
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">O Que Fazer Durante a Enchente</h2>
+          <div class="cards-grid">
+            <div class="card">
+              <h3>Evacuação e Segurança:</h3>
+              <p>
+                Evite áreas alagadas e desligue a eletricidade se necessário.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Ações Imediatas:</h3>
+              <p>
+                Suba para áreas elevadas e fique informado por rádio ou celular.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Cuidados com a Alimentação e Água:</h3>
+              <p>Não consuma alimentos ou água em contato com a enchente.</p>
+            </div>
+            <div class="card">
+              <h3>Comunicação:</h3>
+              <p>
+                Informe familiares sobre sua localização e siga orientações das
+                autoridades.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">O Que Fazer Depois a Enchente</h2>
+          <div class="cards-grid">
+            <div class="card">
+              <h3>Retorno ao Imóvel:</h3>
+              <p>
+                Verifique a estrutura da casa antes de entrar.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Limpeza e Higienização:</h3>
+              <p>
+                Use proteção para limpar e desinfetar o ambiente.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Cuidados de Saúde:</h3>
+              <p>Observe sintomas de infecção e mantenha vacinas atualizadas.</p>
+            </div>
+            <div class="card">
+              <h3>Recuperação de Documentos e Seguros:</h3>
+              <p>
+                Notifique o seguro e documente os danos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="ajuda" class="form-container">
+        <h2>Registre sua Situação</h2>
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" required>
+            </div>
+            <div class="form-group">
+                <label for="situacao">Situação Atual</label>
+                <select id="situacao" required>
+                    <option value="">Selecione...</option>
+                    <option value="risco">Área de Risco</option>
+                    <option value="alagamento">Alagamento</option>
+                    <option value="desabrigado">Desabrigado</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descreva sua Situação</label>
+                <textarea id="descricao" rows="4"></textarea>
+            </div>
+            <button type="submit">Enviar Pedido de Ajuda</button>
+        </form>
+    </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Portal de Alerta Climático do Sul. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@DefesaCivildoRioGrandedoSul" target="_blank"><img src="./assets/img/logo-youtube.jpg" alt="logo-youtube"> Youtube</a>
+            <a href="https://x.com/DefesaCivilRS" target="_blank"><img src="./assets/img/logo-twitter.jpg" alt="logo-twitter"> Twitter</a>
+            <a href="https://www.instagram.com/defesacivilrs/" target="_blank"><img src="./assets/img/logo-instagram.jpg" alt="logo-instagram"> Instagram</a>
+            <a href="https://api.whatsapp.com/message/2RN2EMU6X6S5B1?autoload=1&app_absent=0" target="_blank"><img src="./assets/img/logo-whatsapp.png" alt="Logo-Whatsapp">WhatsApp</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
