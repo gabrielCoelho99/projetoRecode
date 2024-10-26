@@ -61,7 +61,7 @@
 
         nav a:hover {
             background: var(--dark);
-            
+            border: solid rgba(255, 0, 0, 0.301) 1px;
         }
 
         /* Main content */
