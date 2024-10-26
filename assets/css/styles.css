@@ -1,0 +1,374 @@
+        /* Variáveis de cores */
+        :root {
+            --primary: #1a73e8;
+            --secondary: #34a853;
+            --warning: #fbbc05;
+            --danger: #ea4335;
+            --light: #f8f9fa;
+            --dark: #202124;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-image: url('/assets/img/earth-seen-from-space.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
+
+        /* Header */
+        header {
+            /* background: var(--primary); */
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background: var(--dark);
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--primary);
+        }
+
+        /* Main content */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Alert Banner */
+        .alert-banner {
+            background: #fbbd057e;
+            color: var(--dark);
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.068);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--light);
+        }
+
+        /* Forms */
+        .form-container {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #1557b0;
+        }
+
+        /* Map Section */
+        .map-container {
+            background: #f0f0f0;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+
+
+        .volunteer-system {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .volunteer-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .points-display {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .points-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #1a73e8;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+
+        .points-number {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .badge {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .badge-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .badge-locked {
+            opacity: 0.5;
+        }
+
+        .activity-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .activity-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+
+        .prep-checklist {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .checklist-category {
+            margin-bottom: 30px;
+        }
+
+        .category-header {
+            background: #1a73e8;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .checklist-items {
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .item-checkbox {
+            margin-right: 15px;
+            margin-top: 4px;
+        }
+
+        .item-content {
+            flex-grow: 1;
+        }
+
+        .item-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .item-description {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .priority-high {
+            color: #d32f2f;
+        }
+
+        .priority-medium {
+            color: #f57c00;
+        }
+
+        .priority-low {
+            color: #388e3c;
+        }
+
+
+        .alert-system {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        
+        .alert-card {
+            border-left: 4px solid;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .alert-critical {
+            border-left-color: #ff4444;
+            background-color: #ffebee;
+        }
+
+        .alert-warning {
+            border-left-color: #ffbb33;
+            background-color: #fff8e1;
+        }
+
+        .alert-info {
+            border-left-color: #33b5e5;
+            background-color: #e3f2fd;
+        }
+
+        .alert-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .alert-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .alert-timestamp {
+            color: #666;
+            font-size: 0.9em;
+            margin-left: auto;
+        }
+
+        .alert-content {
+            margin-left: 34px;
+        }
+
+        .alert-regions {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .region-tag {
+            display: inline-block;
+            padding: 4px 8px;
+            background: rgba(0,0,0,0.1);
+            border-radius: 4px;
+            margin: 2px;
+            font-size: 0.9em;
+        }

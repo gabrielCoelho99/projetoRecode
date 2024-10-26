@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AguaAlert RS - Portal de Prevenção e Resposta a Enchentes</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>AguaAlert RS</h1>
+        <p>Sistema Integrado de Prevenção e Resposta a Enchentes</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#alertas">Alertas</a></li>
+            <li><a href="#mapa">Mapa</a></li>
+            <li><a href="#prevencao">Prevenção</a></li>
+            <li><a href="#ajuda">Pedir Ajuda</a></li>
+            <li><a href="#voluntario">Seja Voluntário</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="alert-banner">
+            <h2>⚠️ Alerta de Chuvas Intensas</h2>
+            <p>Previsão de precipitação acima de 100mm nas próximas 24h para região metropolitana</p>
+        </div>
+
+        <section class="cards-grid">
+            <div class="card">
+                <h3>🚨 Níveis dos Rios</h3>
+                <p>Acompanhe em tempo real o nível dos principais rios da sua região</p>
+                <button>Ver Medições</button>
+            </div>
+            <div class="card">
+                <h3>🏠 Abrigos Disponíveis</h3>
+                <p>Localize os abrigos temporários mais próximos de você</p>
+                <button>Encontrar Abrigo</button>
+            </div>
+            <div class="card">
+                <h3>🤝 Centro de Doações</h3>
+                <p>Saiba o que é necessário e onde entregar suas doações</p>
+                <button>Como Ajudar</button>
+            </div>
+        </section>
+
+        <section id="mapa" class="map-container">
+            <h2>Mapa de Áreas de Risco</h2>
+            <div style="background: #ddd; height: 400px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                <p>Mapa Interativo da Região</p>
+        </section>
+
+        <div class="checklist-category">
+          <div class="category-header">
+              <h3>Kit de Emergência</h3>
+          </div>
+          <div class="checklist-items">
+              <div class="checklist-item">
+                  <input type="checkbox" class="item-checkbox">
+                  <div class="item-content">
+                      <div class="item-title priority-high">Água Potável</div>
+                      <div class="item-description">2 litros por pessoa por dia, para 3 dias no mínimo</div>
+                  </div>
+              </div>
+  
+              <div class="checklist-item">
+                  <input type="checkbox" class="item-checkbox">
+                  <div class="item-content">
+                      <div class="item-title priority-high">Alimentos Não Perecíveis</div>
+                      <div class="item-description">Estoque para 3 dias (enlatados, barras de cereal, etc)</div>
+                  </div>
+              </div>
+  
+              <div class="checklist-item">
+                  <input type="checkbox" class="item-checkbox">
+                  <div class="item-content">
+                      <div class="item-title priority-medium">Kit de Primeiros Socorros</div>
+                      <div class="item-description">Bandagens, antissépticos, medicamentos essenciais</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <section class="alert-system">
+
+        <div class="alert-card alert-critical">
+            <div class="alert-header">
+                <span class="alert-icon">⚠️</span>
+                <h3>Alerta Crítico: Risco de Inundação</h3>
+                <span class="alert-timestamp">Atualizado: 10:30</span>
+            </div>
+            <div class="alert-content">
+                <p>Previsão de chuvas intensas nas próximas 6 horas. Volume esperado: >100mm</p>
+                <div class="alert-regions">
+                    <span class="region-tag">Porto Alegre</span>
+                    <span class="region-tag">Canoas</span>
+                    <span class="region-tag">São Leopoldo</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="alert-card alert-warning">
+            <div class="alert-header">
+                <span class="alert-icon">📊</span>
+                <h3>Nível do Rio: Atenção</h3>
+                <span class="alert-timestamp">Atualizado: 10:00</span>
+            </div>
+            <div class="alert-content">
+                <p>Rio dos Sinos atingiu 80% do nível de alerta</p>
+                <div class="alert-regions">
+                    <span class="region-tag">Vale dos Sinos</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="alert-card alert-info">
+            <div class="alert-header">
+                <span class="alert-icon">ℹ️</span>
+                <h3>Abrigos Disponíveis</h3>
+                <span class="alert-timestamp">Atualizado: 09:45</span>
+            </div>
+            <div class="alert-content">
+                <p>3 novos abrigos temporários foram abertos na região metropolitana</p>
+                <div class="alert-regions">
+                    <span class="region-tag">Centro</span>
+                    <span class="region-tag">Zona Norte</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <section class="prep-checklist">
+      <div class="checklist-category">
+          <div class="category-header">
+              <h3>Documentos Importantes</h3>
+          </div>
+          <div class="checklist-items">
+              <div class="checklist-item">
+                  <input type="checkbox" class="item-checkbox">
+                  <div class="item-content">
+                      <div class="item-title priority-high">Documentos Pessoais</div>
+                      <div class="item-description">RG, CPF, certidões em envelope impermeável</div>
+                  </div>
+              </div>
+  
+              <div class="checklist-item">
+                  <input type="checkbox" class="item-checkbox">
+                  <div class="item-content">
+                      <div class="item-title priority-medium">Documentos do Imóvel</div>
+                      <div class="item-description">Escritura, contratos, seguros</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+        <!-- <section class="volunteer-system">
+          <div class="volunteer-card">
+              <div class="points-display">
+                  <div class="points-circle">
+                      <span class="points-number">350</span>
+                      <span>pontos</span>
+                  </div>
+                  <h3>Nível: Voluntário Bronze</h3>
+              </div>
+      
+              <h3>Conquistas</h3>
+              <div class="badge-grid">
+                  <div class="badge">
+                      <div class="badge-icon">🎯</div>
+                      <h4>Primeiro Socorro</h4>
+                      <p>5 assistências</p>
+                  </div>
+                  <div class="badge badge-locked">
+                      <div class="badge-icon">🌟</div>
+                      <h4>Super Helper</h4>
+                      <p>20 assistências</p>
+                  </div>
+                  <div class="badge">
+                      <div class="badge-icon">📦</div>
+                      <h4>Doador</h4>
+                      <p>10 doações</p>
+                  </div>
+              </div>
+      
+              <h3>Últimas Atividades</h3>
+              <ul class="activity-list">
+                  <li class="activity-item">
+                      <span>Ajuda no Abrigo Central</span>
+                      <span>+50 pontos</span>
+                  </li>
+                  <li class="activity-item">
+                      <span>Doação de Alimentos</span>
+                      <span>+30 pontos</span>
+                  </li>
+                  <li class="activity-item">
+                      <span>Distribuição de Água</span>
+                      <span>+40 pontos</span>
+                  </li>
+              </ul>
+          </div>
+      </section> -->
+
+        <section id="ajuda" class="form-container">
+            <h2>Registre sua Situação</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" required>
+                </div>
+                <div class="form-group">
+                    <label for="situacao">Situação Atual</label>
+                    <select id="situacao" required>
+                        <option value="">Selecione...</option>
+                        <option value="risco">Área de Risco</option>
+                        <option value="alagamento">Alagamento</option>
+                        <option value="desabrigado">Desabrigado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descreva sua Situação</label>
+                    <textarea id="descricao" rows="4"></textarea>
+                </div>
+                <button type="submit">Enviar Pedido de Ajuda</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
