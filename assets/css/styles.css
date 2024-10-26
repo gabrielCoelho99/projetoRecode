@@ -33,13 +33,20 @@
         }
 
         nav {
-            background: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #20212415;
             padding: 1rem;
+            border: solid rgba(255, 0, 0, 0.13);
+            border-radius: 10px;
+            width: 100vw;
         }
 
         nav ul {
             list-style: none;
             display: flex;
+            align-items: center;
             justify-content: center;
             gap: 2rem;
         }
@@ -53,7 +60,8 @@
         }
 
         nav a:hover {
-            background: var(--primary);
+            background: var(--dark);
+            
         }
 
         /* Main content */
@@ -65,9 +73,9 @@
 
         /* Alert Banner */
         .alert-banner {
-            background: #fbbd057e;
+            background: var(--warning);
             color: var(--dark);
-            padding: 2rem;
+            padding: 1rem;
             text-align: center;
             margin-bottom: 2rem;
             border-radius: 4px;
