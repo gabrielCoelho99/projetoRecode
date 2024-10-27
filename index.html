@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AguaAlert RS - Portal de Prevenção e Resposta a Enchentes</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
     <header>
@@ -36,21 +38,50 @@
             <div class="card">
                 <h3>🚨 Níveis dos Rios</h3>
                 <p>Acompanhe em tempo real o nível dos principais rios da sua região</p>
-                <button>Ver Medições</button>
+                <a href="https://nivelguaiba.com.br/" target="_blank"><button>Ver Medições</button></a>
             </div>
             <div class="card">
                 <h3>🏠 Abrigos Disponíveis</h3>
                 <p>Localize os abrigos temporários mais próximos de você</p>
-                <button>Encontrar Abrigo</button>
+                <a href="https://sosenchentes.rs.gov.br/abrigos" target="_blank"><button>Encontrar Abrigo</button></a>
             </div>
             <div class="card">
                 <h3>🤝 Centro de Doações</h3>
                 <p>Saiba o que é necessário e onde entregar suas doações</p>
-                <button>Como Ajudar</button>
+                <a href="https://sosenchentes.rs.gov.br/doacoes-em-geral" target="_blank"><button>Como Ajudar</button></a>
             </div>
         </section>
 
         
+        <div class="container">
+            <div class="card">
+                <div class="weather-search">
+                    <input type="text" id="cityInput" placeholder="Digite a cidade..." />
+                    <button id="searchButton">Buscar</button>
+                    <button id="clearButton">Limpar</button>
+                    <button id="getLocationButton">Obter temperatura local</button>
+                    <div id="localWeather"></div>
+                </div>
+
+                <div class="flex-container">
+                    <div id="map"></div>
+                    <div id="forecast" style="margin-top: 20px;">Carregando previsão...</div>
+                </div>
+                <div id="weather">Carregando dados...</div>
+            </div>
+            <p>Todos os direitos reservados do mapa interativo são encontrados neste site: <a href="https://openweathermap.org/api" style="text-decoration: none;">Clique aqui!</a></p>
+        </div>
+
+
+        <!--Alerta importante-->
+    <div class="alert-container">
+        <div class="alert-message">
+            <h2>Alerta importante!</h2>
+            <p>Para ajudar na prevenção de enchentes, clique com o botão direito do mouse para obter as coordenadas.</p>
+            <p>Depois, envie as coordenadas para a Defesa Civil via whatsapp clicando no ícone do botão abaixo.</p>
+        </div>
+    </div>
+
 
       <section class="alert-system">
 
@@ -60,6 +91,7 @@
                 <h3>Alerta Crítico: Risco de Inundação</h3>
                 <span class="alert-timestamp">Atualizado: 10:30</span>
             </div>
+
             <div class="alert-content">
                 <p>Previsão de chuvas intensas nas próximas 6 horas. Volume esperado: >100mm</p>
                 <div class="alert-regions">
@@ -103,15 +135,59 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Portal de Alerta Climático do Sul. Todos os direitos reservados.</p>
-        <div class="social-links">
-            <p style="color: white;">Entre em contato com a Defesa Civil:</p>
-            <a href="https://www.youtube.com/@DefesaCivildoRioGrandedoSul" target="_blank"><img src="./assets/img/logo-youtube.jpg" alt="logo-youtube"> Youtube</a>
-            <a href="https://x.com/DefesaCivilRS" target="_blank"><img src="./assets/img/logo-twitter.jpg" alt="logo-twitter"> Twitter</a>
-            <a href="https://www.instagram.com/defesacivilrs/" target="_blank"><img src="./assets/img/logo-instagram.jpg" alt="logo-instagram"> Instagram</a>
-            <a href="https://api.whatsapp.com/message/2RN2EMU6X6S5B1?autoload=1&app_absent=0" target="_blank"><img src="./assets/img/logo-whatsapp.png" alt="Logo-Whatsapp">WhatsApp</a>
+        <div class="footer-content">
+          <p class="copyright">&copy; 2024 Portal de Alerta Climático do Sul. Todos os direitos reservados.</p>
+          <p class="contact">Entre em contato com a Defesa Civil do Rio Grande do Sul:</p>
+          
+          <div class="social-links">
+            <ul>
+              <li style="--cor1: #FF0000; --cor2: #FA8072;">
+                <a href="https://www.youtube.com/@DefesaCivildoRioGrandedoSul" target="_blank">
+                  <span class="icon">
+                    <img src="./assets/img/youtube.svg" alt="logo-youtube">
+                  </span>
+                  <span class="text">Youtube</span>
+                </a>
+              </li>
+              <li style="--cor1: #FB3997; --cor2: #FECF12;">
+                <a href="https://www.instagram.com/defesacivilrs/" target="_blank">
+                  <span class="icon">
+                    <img src="./assets/img/instagram.svg" alt="logo-instagram">
+                  </span>
+                  <span class="text">Instagram</span>
+                </a>
+              </li>
+              <li style="--cor1: #00FF00; --cor2: #FB98FB;">
+                <a href="https://api.whatsapp.com/message/2RN2EMU6X6S5B1?autoload=1&app_absent=0" target="_blank">
+                  <span class="icon">
+                    <img src="./assets/img/whatsapp.svg" alt="Logo-Whatsapp">
+                  </span>
+                  <span class="text">WhatsApp</span>
+                </a>
+              </li>
+              <li style="--cor1: #202124; --cor2: #f8f9fa;">
+                <a href="https://x.com/DefesaCivilRS" target="_blank">
+                  <span class="icon">
+                    <img src="./assets/img/twitter-x.svg" alt="logo-twitter">
+                  </span>
+                  <span class="text">Twitter</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </footer>
+      </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="mapa.js"></script>
+    <script>
+        const map = L.map('map').setView([-30.0346, -51.2177], 13); // Coordenadas de Porto Alegre
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+    </script>
 
 </body>
 </html>
