@@ -303,25 +303,7 @@ h3 {
     animation: levelUpAnimation 0.5s ease;
 }
 
-@keyframes levelUpAnimation {
-    0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
-    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-}
 
-.level-up-modal h2 {
-    color: var(--cor-primaria);
-    margin-bottom: 20px;
-}
-
-.level-up-modal .emoji {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-/* Animação para conquistas desbloqueadas */
-.badge-unlocked {
-    animation: unlockAnimation 1s ease;
-}
 
 @keyframes unlockAnimation {
     0% { transform: scale(1) rotate(0deg); }
@@ -393,4 +375,24 @@ h3 {
 
 .activity-item:first-child {
     animation: destaque 2s ease infinite;
+}
+
+@keyframes levelUpAnimation {
+    0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+.level-up-modal h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+.level-up-modal .emoji {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Animação para conquistas desbloqueadas */
+.badge-unlocked {
+    animation: unlockAnimation 1s ease;
 }
