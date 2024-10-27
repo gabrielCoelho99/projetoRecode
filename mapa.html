@@ -16,7 +16,7 @@
         <ul>
           <li><a href="index.html">Alertas</a></li>
           <li><a href="mapa.html">Mapa</a></li>
-          <li><a href="nivelusuario.html">Game</a></li>
+          <!-- <li><a href="nivelusuario.html">Game</a></li> -->
           <li><a href="ajuda.html">Dicas de Segurança</a></li>
           <li><a href="voluntario.html">Seja Voluntário</a></li>
         </ul>
@@ -28,59 +28,16 @@
 
         <section id="mapa" class="map-container">
             <h2>Mapa de Áreas de Risco</h2>
-            <div id="apiMap">
-                <p>Mapa Interativo da Região</p>
+            <div id="map">
+                <div class="map-img">
+                    <a href="https://defesacivil.rs.gov.br/areas-com-risco-meteorologico-664e9cb7af133" target="_blank"><img src="./assets/img/mapaderisco.jpeg" alt="mapa de risco"><a>
+                </div>
             </div>
+            <!-- <div class="button-map">
+                <a class="link" href="https://defesacivil.rs.gov.br/areas-com-risco-meteorologico-664e9cb7af133" target="_blank">Consulte o site da Defesa civil do Rio Grande do Sul.</a>
+            </div> -->
         </section>
 
-        
-
-      <section class="alert-system">
-
-        <div class="alert-card alert-critical">
-            <div class="alert-header">
-                <span class="alert-icon">⚠️</span>
-                <h3>Alerta Crítico: Risco de Inundação</h3>
-                <span class="alert-timestamp">Atualizado: 10:30</span>
-            </div>
-            <div class="alert-content">
-                <p>Previsão de chuvas intensas nas próximas 6 horas. Volume esperado: >100mm</p>
-                <div class="alert-regions">
-                    <span class="region-tag">Porto Alegre</span>
-                    <span class="region-tag">Canoas</span>
-                    <span class="region-tag">São Leopoldo</span>
-                </div>
-            </div>
-        </div>
-    
-        <div class="alert-card alert-warning">
-            <div class="alert-header">
-                <span class="alert-icon">📊</span>
-                <h3>Nível do Rio: Atenção</h3>
-                <span class="alert-timestamp">Atualizado: 10:00</span>
-            </div>
-            <div class="alert-content">
-                <p>Rio dos Sinos atingiu 80% do nível de alerta</p>
-                <div class="alert-regions">
-                    <span class="region-tag">Vale dos Sinos</span>
-                </div>
-            </div>
-        </div>
-    
-        <div class="alert-card alert-info">
-            <div class="alert-header">
-                <span class="alert-icon">ℹ️</span>
-                <h3>Abrigos Disponíveis</h3>
-                <span class="alert-timestamp">Atualizado: 09:45</span>
-            </div>
-            <div class="alert-content">
-                <p>3 novos abrigos temporários foram abertos na região metropolitana</p>
-                <div class="alert-regions">
-                    <span class="region-tag">Centro</span>
-                    <span class="region-tag">Zona Norte</span>
-                </div>
-            </div>
-        </div>
     </main>
     <footer>
         <p>&copy; 2024 Portal de Alerta Climático do Sul. Todos os direitos reservados.</p>

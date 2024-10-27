@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>AguaAlerta RS</h1>
+        <h1>Alerta RS</h1>
         <p>Sistema Integrado de Prevenção e Resposta a Enchentes</p>
     </header>
 
@@ -16,7 +16,7 @@
         <ul>
           <li><a href="index.html">Alertas</a></li>
           <li><a href="mapa.html">Mapa</a></li>
-          <li><a href="nivelusuario.html">Game</a></li>
+          <!-- <li><a href="nivelusuario.html">Game</a></li> -->
           <li><a href="ajuda.html">Dicas de Segurança</a></li>
           <li><a href="voluntario.html">Seja Voluntário</a></li>
         </ul>
@@ -43,13 +43,6 @@
                 <h3>🤝 Centro de Doações</h3>
                 <p>Saiba o que é necessário e onde entregar suas doações</p>
                 <button>Como Ajudar</button>
-            </div>
-        </section>
-
-        <section id="mapa" class="map-container">
-            <h2>Mapa de Áreas de Risco</h2>
-            <div id="apiMap">
-                <p>Mapa Interativo da Região</p>
             </div>
         </section>
 
@@ -102,140 +95,18 @@
             </div>
         </div>
 
-        
-    </section>
-
-        <div class="checklist-category">
-          <div class="category-header">
-              <h3>Kit de Emergência</h3>
-          </div>
-          <div class="checklist-items">
-              <div class="checklist-item">
-                  <input type="checkbox" class="item-checkbox">
-                  <div class="item-content">
-                      <div class="item-title priority-high">Água Potável</div>
-                      <div class="item-description">2 litros por pessoa por dia, para 3 dias no mínimo</div>
-                  </div>
-              </div>
-
-              <div class="checklist-item">
-                  <input type="checkbox" class="item-checkbox">
-                  <div class="item-content">
-                      <div class="item-title priority-high">Alimentos Não Perecíveis</div>
-                      <div class="item-description">Estoque para 3 dias (enlatados, barras de cereal, etc)</div>
-                  </div>
-              </div>
-
-              <div class="checklist-item">
-                  <input type="checkbox" class="item-checkbox">
-                  <div class="item-content">
-                      <div class="item-title priority-medium">Kit de Primeiros Socorros</div>
-                      <div class="item-description">Bandagens, antissépticos, medicamentos essenciais</div>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-  <section class="prep-checklist">
-      <div class="checklist-category">
-          <div class="category-header">
-              <h3>Documentos Importantes</h3>
-          </div>
-          <div class="checklist-items">
-              <div class="checklist-item">
-                  <input type="checkbox" class="item-checkbox">
-                  <div class="item-content">
-                      <div class="item-title priority-high">Documentos Pessoais</div>
-                      <div class="item-description">RG, CPF, certidões em envelope impermeável</div>
-                  </div>
-              </div>
-  
-              <div class="checklist-item">
-                  <input type="checkbox" class="item-checkbox">
-                  <div class="item-content">
-                      <div class="item-title priority-medium">Documentos do Imóvel</div>
-                      <div class="item-description">Escritura, contratos, seguros</div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-
-        <!-- <section class="volunteer-system">
-          <div class="volunteer-card">
-              <div class="points-display">
-                  <div class="points-circle">
-                      <span class="points-number">350</span>
-                      <span>pontos</span>
-                  </div>
-                  <h3>Nível: Voluntário Bronze</h3>
-              </div>
       
-              <h3>Conquistas</h3>
-              <div class="badge-grid">
-                  <div class="badge">
-                      <div class="badge-icon">🎯</div>
-                      <h4>Primeiro Socorro</h4>
-                      <p>5 assistências</p>
-                  </div>
-                  <div class="badge badge-locked">
-                      <div class="badge-icon">🌟</div>
-                      <h4>Super Helper</h4>
-                      <p>20 assistências</p>
-                  </div>
-                  <div class="badge">
-                      <div class="badge-icon">📦</div>
-                      <h4>Doador</h4>
-                      <p>10 doações</p>
-                  </div>
-              </div>
-      
-              <h3>Últimas Atividades</h3>
-              <ul class="activity-list">
-                  <li class="activity-item">
-                      <span>Ajuda no Abrigo Central</span>
-                      <span>+50 pontos</span>
-                  </li>
-                  <li class="activity-item">
-                      <span>Doação de Alimentos</span>
-                      <span>+30 pontos</span>
-                  </li>
-                  <li class="activity-item">
-                      <span>Distribuição de Água</span>
-                      <span>+40 pontos</span>
-                  </li>
-              </ul>
-          </div>
-      </section> -->
-
-        <section id="ajuda" class="form-container">
-            <h2>Registre sua Situação</h2>
-            <form>
-                <div class="form-group">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" required>
-                </div>
-                <div class="form-group">
-                    <label for="situacao">Situação Atual</label>
-                    <select id="situacao" required>
-                        <option value="">Selecione...</option>
-                        <option value="risco">Área de Risco</option>
-                        <option value="alagamento">Alagamento</option>
-                        <option value="desabrigado">Desabrigado</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="descricao">Descreva sua Situação</label>
-                    <textarea id="descricao" rows="4"></textarea>
-                </div>
-                <button type="submit">Enviar Pedido de Ajuda</button>
-            </form>
-        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Portal de Alerta Climático do Sul. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@DefesaCivildoRioGrandedoSul" target="_blank"><img src="./assets/img/logo-youtube.jpg" alt="logo-youtube"> Youtube</a>
+            <a href="https://x.com/DefesaCivilRS" target="_blank"><img src="./assets/img/logo-twitter.jpg" alt="logo-twitter"> Twitter</a>
+            <a href="https://www.instagram.com/defesacivilrs/" target="_blank"><img src="./assets/img/logo-instagram.jpg" alt="logo-instagram"> Instagram</a>
+            <a href="https://api.whatsapp.com/message/2RN2EMU6X6S5B1?autoload=1&app_absent=0" target="_blank"><img src="./assets/img/logo-whatsapp.png" alt="Logo-Whatsapp">WhatsApp</a>
+        </div>
+    </footer>
 
 </body>
 </html>

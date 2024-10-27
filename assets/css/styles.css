@@ -407,3 +407,36 @@
             margin: 2px;
             font-size: 0.9em;
         }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(30, 30, 63, 0.8);
+            position: relative;
+          }
+          
+          footer p {
+            margin-bottom: 10px;
+          }
+          
+          .social-links {
+            margin-top: 10px;
+          }
+          
+          .social-links a {
+            color: #00bcd4;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+          }
+          
+          .social-links a:hover {
+            /* color: #0097a7; Cor de hover */
+            color: white;
+          }
+          
+          .social-links img {
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+          }

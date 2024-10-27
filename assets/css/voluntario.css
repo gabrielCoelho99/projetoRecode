@@ -1,0 +1,172 @@
+:root {
+    --primary: #1a73e8;
+    --secondary: #34a853;
+    --warning: #fbbc05;
+    --danger: #ea4335;
+    --light: #f8f9fa;
+    --dark: #202124;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--dark);
+    position: relative;
+    
+  }
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(10px); /* Aplica o desfoque */
+    z-index: -1; /* Coloca a imagem desfocada atrás do conteúdo */
+  }
+
+/* Header */
+header {
+    /* background: var(--primary); */
+    color: var(--dark);
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #20212415;
+    padding: 1rem;
+    /* border: solid rgba(255, 0, 0, 0.13); */
+    border-radius: 10px;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: var(--light);
+    color: var(--dark);
+    /* border: solid rgba(255, 0, 0, 0.301) 1px; */
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#como-ajudar, #voluntario {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(248, 249, 250, 0.656);
+}
+
+#como-ajudar h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#como-ajudar h2, #voluntario h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+  
+#como-ajudar a {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+  
+#como-ajudar a:hover {
+    text-decoration: underline;
+}
+
+#voluntario-artigo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#voluntario-artigo div{
+    flex: 1;
+    min-width: 450px;
+}
+
+#voluntario-artigo p{
+    text-align: justify;
+    font-size: 1.15rem;
+}
+
+#voluntario-artigo figure{
+    flex: 1;
+    min-width: 450px;
+}
+
+#voluntario-artigo figure img{
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(30, 30, 63, 0.8);
+    position: relative;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+    color: #FFF;
+  }
+  
+  .social-links {
+    margin-top: 10px;
+  }
+  
+  .social-links a {
+    color: #00bcd4;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: white;
+  }
+  
+  .social-links img {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+  }
