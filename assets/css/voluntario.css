@@ -42,6 +42,86 @@ header {
     text-align: center;
 }
 
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cabecalho :hover{
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+.logo {
+  width: 40%;
+  }
+
+.texto-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+  }
+
+
+  .gallery {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+/* Item individual da galeria */
+.gallery-item {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Efeito hover no item */
+.gallery-item:hover {
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+/* Estilo da imagem dentro do item */
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito hover na imagem */
+.gallery-item:hover .gallery-img {
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .gallery-item {
+        width: 80px;
+        height: 120px;
+    }
+
+    .gallery-item:hover {
+        width: 240px;
+    }
+}
+
+
 nav {
     display: flex;
     align-items: center;

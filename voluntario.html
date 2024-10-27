@@ -7,10 +7,32 @@
         <link rel="stylesheet" href="./assets/css/voluntario.css">
     </head>
     <body>
-        <header>
-            <h1>Alerta RS</h1>
-            <p>Sistema Integrado de Prevenção e Resposta a Enchentes</p>
-        </header>
+      <header>
+        <div class="cabecalho">
+            <div class="logo">
+                <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Fundo do círculo protetor -->
+                    <circle cx="50" cy="50" r="40" fill="#E3F2FD"/>
+                
+                    <!-- Gota d'água estilizada -->
+                    <path d="M50 20 L70 50 A20 20 0 1 1 30 50 Z" fill="#1976D2"/>
+                
+                    <!-- Casa simbolizando proteção -->
+                    <path d="M44 45 L50 35 L56 45 L56 60 L44 60 Z" fill="#FFFFFF"/>
+                
+                    <!-- Texto do logo -->
+                    <text x="110" y="45" font-family="Arial" font-size="24" font-weight="bold" fill="#1976D2">Alerta</text>
+                    <text x="110" y="70" font-family="Arial" font-size="20" fill="#424242">RS</text>
+                
+                    <!-- Ondas representando água/alerta -->
+                    <path d="M240 45 Q250 35, 260 45 Q270 55, 280 45" fill="none" stroke="#1976D2" stroke-width="3"/>
+                    <path d="M240 55 Q250 45, 260 55 Q270 65, 280 55" fill="none" stroke="#1976D2" stroke-width="3"/>
+                  </svg>
+            </div>
+            <!-- <h1>Alerta RS</h1> -->
+            <p class="texto-logo">Sistema Integrado de Prevenção e Resposta a Enchentes</p>
+        </div>
+    </header>
 
         <nav>
             <ul>
@@ -40,19 +62,52 @@
                         comunitários contam com o apoio de voluntários para alcançar suas metas, já que frequentemente não dispõem de recursos financeiros 
                         para contratar equipes pagas.
                     </p>
+                    <br>
                     <p>
                         Ser voluntário traz benefícios tanto para as pessoas e causas assistidas quanto para quem 
                         realiza o trabalho. Ele promove uma sensação de realização pessoal, estimula o crescimento individual, 
                         oferece chances de desenvolver novas habilidades, criar conexões e reforçar o vínculo com a sociedade.</p>
                     </p>    
                 </div>
-                <figure>
+
+                <!-- <figure>
                     <a href="https://sosenchentes.rs.gov.br/como-ser-voluntario#:~:text=Os%20profissionais%20que%20desejam%20atuar,%2Fcadastro%2Dde%2Dprofissionais" target="_blank"><img src="./assets/img/vouluntarios1.jpg" alt="Voluntários separando produtos"></a>
                     <figcaption>Créditos da imagem: https://gauchazh.clicrbs.com.br/ </figcaption>
-                </figure>
+                </figure> -->
 
             </div>
         </article>
+
+          <!-- container = galeria
+                      card = card-galeria
+                      background = galeria-fundo
+                      card-content = galeria-conteudo
+                      title = title-galeria
+                      backdrop = backdrop
+                          
+                -->
+
+                
+                <div class="gallery">
+                  <!-- Cada item da galeria -->
+                  <div class="gallery-item">
+                      <img src="./assets/img/vouluntarios1.jpg" alt="Game" class="gallery-img">
+                  </div>
+                  <div class="gallery-item">
+                      <img src="./assets/img/voluntarios2.jpg" alt="Spider-Man" class="gallery-img">
+                  </div>
+                  <div class="gallery-item">
+                    <img src="./assets/img/voluntarios3.jpg" alt="Spider-Man" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                  <img src="./assets/img/voluntarios4.jpg" alt="Spider-Man" class="gallery-img">
+              </div>
+              <div class="gallery-item">
+                <img src="./assets/img/voluntarios5.jpg" alt="Spider-Man" class="gallery-img">
+              </div>
+                  <!-- Você pode adicionar mais itens seguindo o mesmo padrão -->
+              </div>
+              <p>Fonte: Google Imagens </p>
         </main>
         <footer>
             <div class="footer-content">

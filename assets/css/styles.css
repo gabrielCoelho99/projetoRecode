@@ -43,6 +43,27 @@
             text-align: center;
         }
 
+        .cabecalho {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cabecalho :hover{
+            transform: translateY(-5px);
+            cursor: pointer;
+        }
+    
+        .logo {
+            width: 40%;
+            }
+    
+        .texto-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            }
+
         nav {
             display: flex;
             align-items: center;
