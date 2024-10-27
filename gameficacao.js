@@ -199,3 +199,178 @@ function registerActivity(type) {
         checkBadges();
     }
 }
+
+// Sistema de autenticação
+let currentUser = null;
+        
+function toggleAuth() {
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+    
+    if (loginForm.style.display === 'none') {
+        loginForm.style.display = 'block';
+        registerForm.style.display = 'none';
+    } else {
+        loginForm.style.display = 'none';
+        registerForm.style.display = 'block';
+    }
+}
+
+function login() {
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+    
+    // Verificar no localStorage
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    const user = users.find(u => u.email === email && u.password === password);
+    
+    if (user) {
+        currentUser = user;
+        localStorage.setItem('currentUser', JSON.stringify(user));
+        document.getElementById('authContainer').style.display = 'none';
+        loadUserData();
+    } else {
+        alert('Email ou senha incorretos!');
+    }
+}
+
+function register() {
+    const name = document.getElementById('registerName').value;
+    const email = document.getElementById('registerEmail').value;
+    const password = document.getElementById('registerPassword').value;
+    
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    
+    if (users.some(u => u.email === email)) {
+        alert('Email já cadastrado!');
+        return;
+    }
+    
+    const newUser = {
+        name,
+        email,
+        password,
+        userData: {
+            points: 0,
+            level: 'Bronze',
+            badges: {
+                firstAid: { name: 'Primeiro Socorro', count: 0, unlocked: false },
+                superHelper: { name: 'Super Helper', count: 0, unlocked: false },
+                donor: { name: 'Doador', count: 0, unlocked: false }
+            },
+            activities: []
+        }
+    };
+    
+    users.push(newUser);
+    localStorage.setItem('users', JSON.stringify(users));
+    
+    currentUser = newUser;
+    localStorage.setItem('currentUser', JSON.stringify(newUser));
+    document.getElementById('authContainer').style.display = 'none';
+    loadUserData();
+}
+
+// Função para mostrar modal de level up
+function showLevelUpModal(newLevel) {
+    const modal = document.createElement('div');
+    modal.className = 'level-up-modal';
+    modal.innerHTML = `
+        <div class="emoji">🎉</div>
+        <h2>Parabéns!</h2>
+        <p>Você alcançou o nível ${newLevel}!</p>
+        <button onclick="this.parentElement.remove()">Fechar</button>
+    `;
+    document.body.appendChild(modal);
+    
+    // Remove modal após 5 segundos
+    setTimeout(() => modal.remove(), 5000);
+}
+
+// Função para mostrar notificação de conquista
+function showBadgeNotification(badgeName) {
+    const notification = document.createElement('div');
+    notification.className = 'level-up-modal';
+    notification.innerHTML = `
+        <div class="emoji">🏆</div>
+        <h2>Nova Conquista!</h2>
+        <p>Você desbloqueou: ${badgeName}</p>
+        <button onclick="this.parentElement.remove()">Fechar</button>
+    `;
+    document.body.appendChild(notification);
+    
+    setTimeout(() => notification.remove(), 5000);
+}
+
+// Modificar a função updateLevel para incluir notificação
+function updateLevel() {
+    const oldLevel = currentUser.userData.level;
+    
+    for (const [level, range] of Object.entries(levels)) {
+        if (currentUser.userData.points >= range.min && currentUser.userData.points <= range.max) {
+            if (oldLevel !== level) {
+                currentUser.userData.level = level;
+                showLevelUpModal(level);
+            }
+            break;
+        }
+    }
+}
+
+// Modificar a função checkBadges para incluir notificações
+function checkBadges() {
+    const badges = currentUser.userData.badges;
+    
+    // Verificar Primeiro Socorro
+    if (countActivityType('socorro') >= 5 && !badges.firstAid.unlocked) {
+        badges.firstAid.unlocked = true;
+        showBadgeNotification('Primeiro Socorro');
+    }
+    
+    // Verificar Super Helper
+    if (countActivityType('ajuda') >= 20 && !badges.superHelper.unlocked) {
+        badges.superHelper.unlocked = true;
+        showBadgeNotification('Super Helper');
+    }
+    
+    // Verificar Doador
+    if (countActivityType('doacao') >= 10 && !badges.donor.unlocked) {
+        badges.donor.unlocked = true;
+        showBadgeNotification('Doador');
+    }
+    
+    updateUI();
+    saveProgress();
+}
+
+// Modificar função saveProgress para salvar no usuário correto
+function saveProgress() {
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    const userIndex = users.findIndex(u => u.email === currentUser.email);
+    
+    if (userIndex !== -1) {
+        users[userIndex].userData = currentUser.userData;
+        localStorage.setItem('users', JSON.stringify(users));
+        localStorage.setItem('currentUser', JSON.stringify(currentUser));
+    }
+}
+
+// Carregar dados do usuário atual
+function loadUserData() {
+    const savedUser = localStorage.getItem('currentUser');
+    if (savedUser) {
+        currentUser = JSON.parse(savedUser);
+        userData = currentUser.userData;
+        updateUI();
+    }
+}
+
+// Verificar autenticação ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    const savedUser = localStorage.getItem('currentUser');
+    if (savedUser) {
+        currentUser = JSON.parse(savedUser);
+        document.getElementById('authContainer').style.display = 'none';
+        loadUserData();
+    }
+});

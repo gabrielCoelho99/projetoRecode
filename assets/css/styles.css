@@ -63,7 +63,7 @@
         }
 
         nav a {
-            color: white;
+            color: var(--dark);
             text-decoration: none;
             padding: 0.5rem 1rem;
             border-radius: 4px;
@@ -71,7 +71,7 @@
         }
 
         nav a:hover {
-            background: var(--light);
+            background: var(--primary);
             color: var(--dark);
             /* border: solid rgba(255, 0, 0, 0.301) 1px; */
         }

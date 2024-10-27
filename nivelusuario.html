@@ -1,12 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AguaAlerta RS</title>
     <link rel="stylesheet" href="./assets/css/game.css">
 </head>
 <body>
+    <!-- Container de autenticação -->
+    <div class="auth-container" id="authContainer">
+        <div class="auth-card">
+            <div id="loginForm" class="auth-form">
+                <h2>Login</h2>
+                <input type="email" placeholder="Email" id="loginEmail" required>
+                <input type="password" placeholder="Senha" id="loginPassword" required>
+                <button onclick="login()">Entrar</button>
+                <div class="auth-toggle">
+                    <button onclick="toggleAuth()">Não tem uma conta? Cadastre-se</button>
+                </div>
+            </div>
+
+            <div id="registerForm" class="auth-form" style="display: none;">
+                <h2>Cadastro</h2>
+                <input type="text" placeholder="Nome" id="registerName" required>
+                <input type="email" placeholder="Email" id="registerEmail" required>
+                <input type="password" placeholder="Senha" id="registerPassword" required>
+                <button onclick="register()">Cadastrar</button>
+                <div class="auth-toggle">
+                    <button onclick="toggleAuth()">Já tem uma conta? Faça login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header>
         <h1>AguaAlerta RS</h1>
         <p>Sistema Integrado de Prevenção e Resposta a Enchentes</p>
@@ -14,57 +40,32 @@
 
     <nav>
         <ul>
-          <li><a href="index.html">Alertas</a></li>
-          <li><a href="mapa.html">Mapa</a></li>
-          <!-- <li><a href="nivelusuario.html">Game</a></li> -->
-          <li><a href="ajuda.html">Dicas de Segurança</a></li>
-          <li><a href="voluntario.html">Seja Voluntário</a></li>
+            <li><a href="index.html">Alertas</a></li>
+            <li><a href="mapa.html">Mapa</a></li>
+            <li><a href="ajuda.html">Dicas de Segurança</a></li>
+            <li><a href="voluntario.html">Seja Voluntário</a></li>
+            <li><a href="#" onclick="logout()" id="logoutButton" style="display: none;">Sair</a></li>
         </ul>
-      </nav>
+    </nav>
 
     <section class="volunteer-system">
         <div class="volunteer-card">
             <div class="points-display">
                 <div class="points-circle">
-                    <span class="points-number">350</span>
+                    <span class="points-number">0</span>
                     <span>pontos</span>
                 </div>
                 <h3>Nível: Voluntário Bronze</h3>
             </div>
-    
+
             <h3>Conquistas</h3>
             <div class="badge-grid">
-                <div class="badge">
-                    <div class="badge-icon">🎯</div>
-                    <h4>Primeiro Socorro</h4>
-                    <p>5 assistências</p>
-                </div>
-                <div class="badge badge-locked">
-                    <div class="badge-icon">🌟</div>
-                    <h4>Super Helper</h4>
-                    <p>20 assistências</p>
-                </div>
-                <div class="badge">
-                    <div class="badge-icon">📦</div>
-                    <h4>Doador</h4>
-                    <p>10 doações</p>
-                </div>
+                <!-- Badges serão preenchidas dinamicamente pelo JavaScript -->
             </div>
-    
+
             <h3>Últimas Atividades</h3>
             <ul class="activity-list">
-                <li class="activity-item">
-                    <span>Ajuda no Abrigo Central</span>
-                    <span>+50 pontos</span>
-                </li>
-                <li class="activity-item">
-                    <span>Doação de Alimentos</span>
-                    <span>+30 pontos</span>
-                </li>
-                <li class="activity-item">
-                    <span>Distribuição de Água</span>
-                    <span>+40 pontos</span>
-                </li>
+                <!-- Atividades serão preenchidas dinamicamente pelo JavaScript -->
             </ul>
         </div>
     </section>

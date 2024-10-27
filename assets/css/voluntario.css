@@ -62,7 +62,7 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    color: var(--dark);
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -70,7 +70,7 @@ nav a {
 }
 
 nav a:hover {
-    background: var(--light);
+    background: var(--primary);
     color: var(--dark);
     /* border: solid rgba(255, 0, 0, 0.301) 1px; */
 }
@@ -156,7 +156,7 @@ footer {
   
   .social-links a {
     color: #00bcd4;
-    margin: 0 10px;
+    margin: 6px;
     text-decoration: none;
     transition: color 0.3s;
   }
@@ -166,6 +166,7 @@ footer {
   }
   
   .social-links img {
+    margin-right: 5px;
     border-radius: 50%;
     width: 25px;
     height: 25px;

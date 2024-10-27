@@ -221,6 +221,138 @@ h3 {
     transform: translateY(0);
 }
 
+/* Manter todos os estilos existentes do seu CSS original */
+/* Adicionar os novos estilos para autenticação e notificações */
+
+/* Estilos para o sistema de login/registro */
+.auth-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.auth-card {
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 400px;
+    box-shadow: var(--sombra-card);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-form input {
+    padding: 12px;
+    border: 1px solid var(--cor-cinza-claro);
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.auth-form button {
+    padding: 12px;
+    background: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.auth-form button:hover {
+    background: var(--cor-secundaria);
+}
+
+.auth-toggle {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.auth-toggle button {
+    background: none;
+    border: none;
+    color: var(--cor-primaria);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Estilo para o modal de nível */
+.level-up-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--sombra-card);
+    text-align: center;
+    z-index: 1000;
+    animation: levelUpAnimation 0.5s ease;
+}
+
+@keyframes levelUpAnimation {
+    0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+.level-up-modal h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+.level-up-modal .emoji {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Animação para conquistas desbloqueadas */
+.badge-unlocked {
+    animation: unlockAnimation 1s ease;
+}
+
+@keyframes unlockAnimation {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(10deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+/* Animação para pontos ganhos */
+@keyframes pontosGanhos {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.pontos-animados {
+    animation: pontosGanhos 0.5s ease;
+}
+
+/* Responsividade para modais */
+@media (max-width: 600px) {
+    .auth-card {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .level-up-modal {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
 /* Animação para novos pontos */
 @keyframes pontosGanhos {
     0% { transform: scale(1); }
